@@ -3,7 +3,6 @@
 *.maf
 *.mtc
 *.mtc0
-*.pdf
 *.aux
 *.cut
 *.fdb_latexmk
