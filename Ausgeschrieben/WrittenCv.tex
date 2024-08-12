@@ -1,0 +1,157 @@
+\documentclass[10pt, a4paper]{article}
+%\usepackage{fontspec} 
+
+% DOCUMENT LAYOUT
+\usepackage{geometry} 
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\geometry{a4paper, textwidth=5.5in, textheight=8.5in, marginparsep=7pt, marginparwidth=.6in}
+%%% Indent länge setzen
+%\setlength\parindent{0in}
+
+% FONTS 	Hauptsächlich für XELATEX
+\usepackage[usenames,dvipsnames]{color}
+%\usepackage{xunicode}
+%\usepackage{xltxtra}
+%\defaultfontfeatures{Mapping=tex-text}
+%\setromanfont [Ligatures={Common}, Numbers={OldStyle}, Variant=01]{Linux Libertine O}
+%\setmonofont[Scale=0.8]{Monaco}
+
+% ---- CUSTOM COMMANDS
+%\chardef\&="E050
+\newcommand{\html}[1]{\href{#1}{\scriptsize\textsc{[html]}}}
+\newcommand{\pdf}[1]{\href{#1}{\scriptsize\textsc{[pdf]}}}
+\newcommand{\doi}[1]{\href{#1}{\scriptsize\textsc{[doi]}}}
+% ---- MARGIN YEARS
+\usepackage{marginnote}
+%\newcommand{\amper{}}{\chardef\amper="E0BD }
+\newcommand{\years}[1]{\marginnote{\scriptsize #1}}
+%\renewcommand*{\raggedleftmarginnote}{}
+\setlength{\marginparsep}{6pt}
+%\reversemarginpar
+
+% HEADINGS
+\usepackage{sectsty} 
+\usepackage[normalem]{ulem} 
+\sectionfont{\mdseries\upshape\Large}
+\subsectionfont{\mdseries\scshape\normalsize} 
+\subsubsectionfont{\mdseries\upshape\large} 
+\title{Curriculum Vitae}
+\author{Philipp Stassen}
+\date{}
+
+% PDF SETUP
+% ---- FILL IN HERE THE DOC TITLE AND AUTHOR
+\usepackage[bookmarks, colorlinks, breaklinks, 
+% ---- FILL IN HERE THE TITLE AND AUTHOR
+	pdftitle={Curriculum vitae},
+	pdfauthor={Philipp Stassen},
+	pdfproducer={http://nitens.org/taraborelli/cvtex}
+]{hyperref}  
+\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=MidnightBlue} 
+
+% DOCUMENT
+\begin{document}
+\maketitle
+\noindent Raiffeisenstraße 20\\
+65510 Idstein \\
+Deutschland \\[.2cm]
+Mobiltelefon: +49 151 42429379\\
+E-mail: philipp.stassen@gmail.com \\
+ Geboren: 31. Januar 1994 in Wiesbaden, Deutschland\\
+Nationalität: Deutsch/Niederländisch 
+
+%%\hrule
+\section*{}
+Mein Name ist Philipp Stassen, ich bin am 31. Januar 1994 in Wiesbaden geboren und in Idstein aufgewachsen.
+\years{Schullaufbahn} Nach meiner Grundschulausbildung in den Jahren 2000 - 2004 folgten zwei Jahre in der Förderstufe an der Limesschule Idstein und anschließend weitere 7 Jahre an der Pestalozzischule Idstein, an der ich im August 2013 mein Abitur erwarb. \\
+
+\years{Vereinsmitgliedschaft} Mit 13 Jahren begann ich Vereinsbasketball zu spielen. Ich durchlief drei Jugendmannschaften und profitierte von der guten Organisation des Vereins. Besonders habe ich mich über die einwöchige Exkursion im Juli 2011 nach Uglitsch in Russland gefreut. Gemeinsam mit einer kleinen Gruppe anderer Vereinsmitglieder reisten wir zu der Partnergemeinde meiner Heimatstadt Idstein, um freundschaftlich gegeneinander Basketball zu spielen und die fremde Kultur kennen zu lernen. Ab meinem 16. Lebensjahr beteiligte ich mich als Schiedsrichter an der Aufrechterhaltung des Spielbetriebs.  \\
+
+
+\years{Sambia \\ Aug - Sep \\ 2018} Nach meinem Schulabschluss im August 2013 durfte ich meinen Patenonkel für knapp 4 Wochen nach Sambia begleiten. Er leitet dort ein Hilfsprogramm zur Verbesserung der Lebensqualität in den zahlreichen, nahezu autark lebenden Dorfgemeinschaften -- das \emph{African Community Project}. Mein Onkel übertrug mir die Verantwortung für ein kleineres seiner Projekte: Die Errichtung eines kleinen Dammes, der die Wasserversorgung einer Dorfgemeinde verbessern sollte. 
+Bei der Umsetzung dieses Vorhabens waren wir auf die Mitarbeit der Dorfbewohner angewiesen.
+	Leider war ich damals noch nicht bereit, mich der Dorfgemeinschaft auch über unsere Zusammenarbeit hinaus zu öffnen. Trotzdem ist retrospektiv dieser spärliche -- weil nur auf den Dammbau bezogene -- Kontakt zu den herzlichen und liebenswerten Dorfbewohnern die wertvollste Erfahrung meiner Reise nach Sambia. \\
+
+	\years{Maschinenbau} Direkt im Anschluss, im September 2013 begann meine Ausbildung bei Procter \& Gamble. Ich habe mich für ein duales Maschinenbaustudium entschieden. Obwohl ich das erste Semester erfolgreich bestritten habe, entschied ich mich gegen diesen sehr praktisch orientierten Studiengang. \\
+
+	\years{Mathematik} Nach dieser ersten Studienerfahrung erwägte ich ein Philosophie Studium aufzunehmen, entschied mich im Sommer 2014 aber für ein Mathematikstudium an der \emph{Rheinischen Friedrich-Wilhelms Universität Bonn}. Die Philosophie begeisterte mich jedoch weiterhin, so besuchte ich neben den beiden Vorlesungen, die ich als Nebenfach eingebracht habe, noch ein Seminar zu Wittgenstein und zwei Kongresse zu Kants Philosophie der Zeit.
+	
+\noindent	Zu Beginn fühlte ich mich von den mathematischen Vorlesungen überfordert. Ich benötigte drei Semester, um mich einzugewöhnen und fand in der mathematischen Logik und der Modelltheorie Gebiete, die mich begeistern. Mit der Zeit stabilisierten sich meine Leistungen, in der Modelltheorie und Typen Theorie wurden sie sehr gut. Für meine Bachelorarbeit studierte ich formale Aspekte der \emph{Homotopie Typen Theorie}. Passend dazu absolvierte ich dieses Sommersemester ein Praktikum zu automatisierter Deduktion. Desweiteren nahm ich der Summer School \emph{Types, Sets and Constructions}\footnote{Link zum Programm https://www.him.uni-bonn.de/application/types-sets-constructions/summer-school/} teil. \\
+
+	\years{Masterstudium \\
+	2018} Ich beabsichtige mein Wissen über formale Methoden und ihre Bedeutung in der Mathematik weiter zu vertiefen. Deshalb habe ich mich für das zweijährige gemeinsame Masterprogramm der Stockholm Universität und der KTH in Stockholm entschieden. Dort gibt es ausreichend Angebote und Fortbildungsmöglichkeiten in diesem speziellen Bereich der Mathematik. \\
+
+	\years{christlicher Glaube} 
+	Während ich in meiner Kindheit noch Bindungen zur katholischen Gemeinde St Martin in Idstein pflegte -- ich sang im Kinderchor und nahm mit meiner Mutter und meiner kleinen Schwester regelmäßig an Gottesdiensten teil -- ebbte mein Interesse für die Kirche in meiner Jugend ab. Dies änderte sich erst in der Mitte meines zweiten Studiengangs, als ein Freund mich einlud, die Gemeinde St Petrus in Bonn zu besuchen. Nach und nach öffnete ich mich der Gemeinde und nahm schließlich auch aktiv an dem Gesprächskreis \emph{Glaube und Leben} und anderen außergottesdienstlichen Veranstaltungen teil. Seit Juli 2017 engagierte ich mich für die Messdiener und betreute einige Unternehmungen, wie Verkauf in der Vorweihnachtszeit, oder der Gestaltung von Benefizabenden. Die hier erwirtschafteten Geldern kamen den Messdienern für Ausflüge zugute.
+	Desweiteren besuchte ich die Treffen des Arbeitskreises \emph{Mushubi/Bishiyga} der St. Petrus Gemeinde. Dort werden lebhafte und vertrauensvolle Beziehungen zu zwei Partnergemeinden in Ruanda unterhalten. Gemeinsam diskutieren wir die finanzielle Unterstützung lokaler Projekte und planen einen Besuch unserer Pfarrei in Ruanda innerhalb der nächsten Jahre.
+	
+	\noindent Ich fühle mich der St. Petrus Gemeinde, auch nachdem ich Anfang August 2018 aus Bonn weggezogen bin, sehr verbunden.  \\
+
+
+	Ich betrachte mich als aufgeschlossenen Menschen, der seine christlichen Überzeugungen lebt und nach außen trägt. Für die nähere Zukunft freue ich mich darauf mich in Stockholm nochmal öffnen zu müssen, für neue Freunde, eine neue Gemeinde und neue Erfahrungen, getragen von den lieben Menschen, die mich auf meinen bisherigen Lebensabschnitten begleitet haben. Durch das Stipendium des Cusanuswerks erhoffe ich mir den Raum für eine kreative Auseinandersetzung mit dem Masterstudium der Mathematik/mathematischen Logik, in die vor allem Aspekte der Philosophie, der Linguistik und der Informatik mit einfließen können.
+
+
+%\section*{Current position}
+%\emph{Emeritus Professor}, Institute for Advanced Study, Princeton
+%
+%%%\hrule
+%\section*{Areas of specialization}
+% Physics • Relativity theory
+%
+%%%\hrule
+%\section*{Appointments held}
+%\noindent
+%\years{1903-1908}Swiss Patent Office, Bern\\
+%\years{1908-1911}University of Bern\\
+%\years{1911-1912}University of Zürich\\
+%\years{1912-1914}Charles University of Prague\\
+%\years{1914-1932}Prussian Academy of Sciences, Berlin\\
+%\years{1920-1930}University of Leiden\\
+%\years{1932-1955}Institute for Advanced Study, Princeton
+%
+%%\hrule
+%\section*{Education}
+%\noindent
+%\years{1900}\textsc{MSc} in Physics, ETH Zürich\\
+%\years{1900}\textsc{PhD} in Physics, ETH Zürich
+%
+%%\hrule
+%\section*{Grants, honors \& awards}
+%\noindent
+%\years{1921}Nobel Prize in Physics, Nobel Foundation
+%
+%\section*{Publications \& talks}
+%
+%\subsection*{Journal articles}
+%\noindent
+%\years{1901}Einstein, Albert (1901), “Folgerungen aus den Capillaritätserscheinungen (Conclusions Drawn from the Phenomena of Capillarity)", \emph{Annalen der Physik} 4: 513\\
+%\years{1905a}Einstein, Albert (1905), “On a Heuristic Viewpoint Concerning the Production and Transformation of Light", \emph{Annalen der Physik} 17: 132–148.\\
+%\years{1905b}Einstein, Albert (1905), A new determination of molecular dimensions. \emph{PhD dissertation}.\\
+%\years{1905c}Einstein, Albert (1905), “On the Motion—Required by the Molecular Kinetic Theory of Heat—of Small Particles Suspended in a Stationary Liquid", \emph{Annalen der Physik} 17: 549–560. 
+%\years{1905d}Einstein, Albert (1905), “On the Electrodynamics of Moving Bodies", \emph{Annalen der Physik} 17: 891–921.\\
+%\years{1905e}Einstein, Albert (1905), “Does the Inertia of a Body Depend Upon Its Energy Content?", \emph{Annalen der Physik} 18: 639–641.\\
+%\years{1915}Einstein, Albert (1915), “Die Feldgleichungen der Gravitation (The Field Equations of Gravitation)", \emph{Koniglich Preussische Akademie der Wissenschaften}: 844–847\\
+%\years{1917a}Einstein, Albert (1917), “Kosmologische Betrachtungen zur allgemeinen Relativitätstheorie (Cosmological Considerations in the General Theory of Relativity)", \emph{Koniglich Preussische Akademie der Wissenschaften}\\
+%\years{1917b}Einstein, Albert (1917), “Zur Quantentheorie der Strahlung (On the Quantum Mechanics of Radiation)", \emph{Physikalische Zeitschrift} 18: 121–128
+%
+%\subsection*{Books}
+%\noindent
+%\years{1954}Einstein, Albert (1954), \emph{Ideas and Opinions}, New York: Random House, ISBN 0-517-00393-7
+%
+%\subsection*{Newspaper articles}
+%\noindent
+%\years{1940}Einstein, Albert, et al. (December 4, 1948), “To the editors", \emph{New York Times}\\
+%\years{1949}Einstein, Albert (May 1949), “Why Socialism?", \emph{Monthly Review}.
+%
+%\section*{Teaching}
+%
+%...
+%
+%%\hrule
+%\section*{Service to the profession}
+%
+%...
+%%\vspace{1cm}
+%%\hrulefill
+\end{document}

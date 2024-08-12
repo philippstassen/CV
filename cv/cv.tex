@@ -1,0 +1,240 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Classicthesis-Styled CV
+% LaTeX Template
+% Version 1.0 (22/2/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Alessandro Plasmati
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{scrartcl}
+\reversemarginpar % Move the margin to the left of the page 
+\newcommand{\MarginText}[1]{\marginpar{\raggedleft\itshape\small#1}} % New command defining the margin text style
+
+\usepackage[nochapters]{classicthesis} % Use the classicthesis style for the style of the document
+\usepackage[LabelsAligned]{currvita} % Use the currvita style for the layout of the document
+\usepackage[bottom=0.7in, top=0.7in, left=2in, right=1in, marginparsep=0.35in]{geometry}
+\renewcommand{\cvheadingfont}{\LARGE\color{Orange}} % Font color of your name at the top
+
+\usepackage{hyperref} % Required for adding links	and customizing them
+\hypersetup{colorlinks, breaklinks, urlcolor=Orange, linkcolor=Orange} % Set link colors
+
+\newlength{\datebox}\settowidth{\datebox}{Spring 2020} % Set the width of the date box in each block
+
+\newcommand{\NewEntry}[3]{\noindent\hangindent=2.2em\hangafter=0 \parbox{\datebox}{\small \textit{#1}}\hspace{1.5em} #2 #3 % Define a command for each new block - change spacing and font sizes here: #1 is the left margin, #2 is the italic date field and #3 is the position/employer/location field
+\vspace{0.5em}} % Add some white space after each new entry
+
+\newcommand{\Description}[1]{\hangindent=4.5em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize\vspace{1em}} % Define a command for descriptions of each entry - change spacing and font sizes here
+
+\newcommand{\topic}[1]{\noindent\hspace{2em}\spacedlowsmallcaps{#1}\vspace{1em}}
+\def\changemargin#1#2{\list{}{\rightmargin#2\leftmargin#1}\item[]}
+\let\endchangemargin=\endlist 
+%----------------------------------------------------------------------------------------
+\date{}
+\begin{document}
+
+\thispagestyle{empty} % Stop the page count at the bottom of the first page
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{cv}{\spacedallcaps{Philipp Jan Andries Stassen}}\vspace{1.5em} % Your name
+
+\noindent\spacedlowsmallcaps{Personal Information}\vspace{0.5em} % Personal information heading
+
+\NewEntry{}{Born in Wiesbaden (Germany),}{31 January 1994} % Birthplace and date
+
+\NewEntry{address}{Skovvangsvej 62, 3tv, 8200 Aarhus N, Denmark}
+
+\NewEntry{email}{\href{mailto:philipp.stassen@gmail.com}{philipp.stassen@gmail.com}} % Email address
+
+%\NewEntry{website}{\href{http://www.johnsmith.com}{http://www.johnsmith.com}} % Personal website
+
+\NewEntry{phone}{+45 42469876} % Phone number(s)
+
+\NewEntry{nationality}{German \& Dutch}
+
+\vspace{2.7em} % Extra white space between the personal information section and goal
+
+%\noindent\spacedlowsmallcaps{Goal}\vspace{1em} % Goal heading, could be used for a quotation or short profile instead
+
+%\Description{Gain fundamental experience in my area of interest and expertise.}\vspace{2em} % Goal text
+
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+%\noindent\hspace{2em}\spacedlowsmallcaps{Education}\vspace{1em}
+\topic{Education}
+
+\Description{\MarginText{PhD} \hspace{-0.3em}since 2020 \hspace{0.7em} \textbf{Aarhus University, Denmark}
+
+ 	\vspace{0.5em}
+	Department: Computer Science \newline
+%Description: This thesis explored the idea that money has been the cause of untold anguish and suffering in the world. I found that it has, in fact, not.\newline
+Supervisor: Prof. Lars Birkedal
+}
+
+%------------------------------------------------
+%\NewEntry{2018-2020}{Stockholm Universitet, Sweden}
+
+\Description{\MarginText{Master of Science} \hspace{-0.3em}2018-2020 \hspace{1em} \textbf{Stockholm Universitet, Sweden}
+	
+	\vspace{0.5em}
+	Department: Mathematics \newline
+	Thesis: \textit{An Analysis of Curien's Syntax for Dependent Type Theory}\newline
+%Description: This thesis explored the idea that money has been the cause of untold anguish and suffering in the world. I found that it has, in fact, not.\newline
+Supervisors: Assoc. Prof. Peter LeFanu \textsc{Lumsdaine} \& Dr. Guillaume \textsc{Brunerie}\newline
+Grade: A \newline
+Awarded \textsc{Mittag-Leffler Prize}
+}
+
+%------------------------------------------------
+
+%\NewEntry{2014-2018}{Universität Bonn, Germany}
+
+\Description{\MarginText{Bachelor of Science}2014-2018 \hspace{1em} \textbf{Universität Bonn, Germany} 
+
+	\vspace{0.5em}
+	\noindent Department: Mathematics\newline
+Thesis: \textit{Formalism of homotopy type theory and its applications to logic} \newline
+Supervisors: Prof. Peter \textsc{Koepke} \& Dr. Philipp \textsc{Lücke}\newline
+Grade: 1.5
+  }
+
+
+%------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\topic{Experience}
+
+\Description{\MarginText{Conference Talks}2022\hspace{3.6em} {\textsc{TYPES}}\newline
+  2022\hspace{3.6em} {\textsc{WITS (POPL)}}\newline
+%  2019\hspace{3.6em} {\textsc{Proof, Computation and Complexity}}\newline
+%	2019 \hspace{3.3em} {\textsc{Mathematical Logic and Constructivity}} \newline
+%	2018 \hspace{3.3em} \textsc{Types, Sets and Constructions}
+%Developed spreadsheets for risk analysis on exotic derivatives on a wide array of commodities (ags, oils, precious and base metals), managed blotter and secondary trades on structured notes, liaised with Middle Office, Sales and Structuring for bookkeeping. \\ Reference: John \textsc{McDonald}\ \ $\cdotp$\ \ +1 (000) 111 1111\ \ $\cdotp$\ \ \href{mailto:john@lehman.com}{john@lehman.com}
+}
+
+%------------------------------------------------
+%
+%\NewEntry{2010--2011}{Summer Intern, \textsc{Initech Inc}  --- Chicago}
+%
+%\Description{\MarginText{Initech Inc}Rated "truly distinctive" for Analytical Skills and Teamwork. \\ Reference: Bill \textsc{Lumbergh}\ \ +1 (000) 111 1111\ \ $\cdotp$\ \ \href{mailto:bill@initech.com}{bill@initech.com}}
+%
+%------------------------------------------------
+
+%\NewEntry{2018}{\textsc{Preparation and tutelage of a course in mathematical logic}}
+
+\Description{\MarginText{Teaching}2021 \& 2022 \hspace{0.01em} Teaching Assistant: \textsc{Computability and Logic}\newline
+  2019 \hspace{3.3em} Preparation and tutelage of a course in \textsc{mathematical logic}
+%Worked in the Nerd Herd and helped to solve computer problems by asking customers to turn their computers off and on again. \\ Reference: Big \textsc{Mike}\ \ +1 (000) 111 1111\ \ $\cdotp$\ \ \href{mailto:mike@buymore.com}{mike@buymore.com}}
+}
+%------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
+
+%	PUBLICATIONS
+%----------------------------------------------------------------------------------------
+
+%\spacedlowsmallcaps{Publications}\vspace{1em}
+%
+%\NewEntry{January 2013}{Publication Title}
+%
+%\Description{\MarginText{Full Journal Name}Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nisl tellus, sodales non pulvinar in, adipiscing sit amet purus. Suspendisse sed facilisis diam. Sed ornare sem nec justo adipiscing nec venenatis lectus commodo. Mauris non neque ligula. Pellentesque sed quam eu felis iaculis iaculis ac a leo. Suspendisse neque neque, placerat id adipiscing et, elementum eu sem.\\ Authors: John \textsc{Smith}, ~James \textsc{Smith}}
+%
+%%------------------------------------------------
+%
+%\NewEntry{Sept. 2012}{Publication Title}
+%
+%\Description{\MarginText{Full Journal Name}Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nisl tellus, sodales non pulvinar in, adipiscing sit amet purus. Suspendisse sed facilisis diam. Sed ornare sem nec justo adipiscing nec venenatis lectus commodo. Mauris non neque ligula. Pellentesque sed quam eu felis iaculis iaculis ac a leo. Suspendisse neque neque, placerat id adipiscing et, elementum eu sem.\\ Authors: John \textsc{Smith}, ~James \textsc{Smith}}
+%
+%------------------------------------------------
+
+%\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	COMPUTER SKILLS
+%----------------------------------------------------------------------------------------
+\topic{Computer Skills}
+
+\Description{\MarginText{Advanced} Agda, Vim, Emacs, OCaml}
+
+\Description{\MarginText{Intermediate} Github, Haskell, \LaTeX, Linux }
+
+\Description{\MarginText{Basic} C++, Coq, Iris, Mathematica, Python}
+
+%------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	OTHER INFORMATION
+%----------------------------------------------------------------------------------------
+
+%\topic{Awards}
+%
+%\Description{\MarginText{Mittag-Leffler} 2020 \hspace{3.3em} for my Master Thesis project}
+
+\topic{Languages}
+%\Description{\MarginText{Awards}2011\ \ $\cdotp$\ \ School of Business Postgraduate Scholarship}
+%
+%\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+%
+%\Description{2010\ \ $\cdotp$\ \ Top Achiever Award -- Commerce}
+%
+%%------------------------------------------------
+%
+%\vspace{1em}
+%
+%\Description{\MarginText{Communication Skills}2010\ \ $\cdotp$\ \ Oral Presentation at the California Business Conference}
+%
+%\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+%
+%\Description{2009\ \ $\cdotp$\ \ Poster at the Annual Business Conference in Oregon}
+%
+%------------------------------------------------
+
+\newlength{\langbox} % Create a new length for the length of languages to keep them equally spaced
+\settowidth{\langbox}{English} % Length equals the length of "English" - if you have a longer language in your list put it here
+
+\Description{\parbox{\langbox}{\textsc{German}}\ \ $\cdotp$\ \ \ Mothertongue}
+
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+\Description{\parbox{\langbox}{\textsc{English}}\ \ $\cdotp$\ \ \ Fluent (written and spoken)}
+
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+\Description{\parbox{\langbox}{\textsc{Danish}}\ \ $\cdotp$\ \ \ Beginner }
+
+\vspace{1em} % Negative vertical space to counteract the vertical space between every \Description command
+%------------------------------------------------
+
+%\Description{\MarginText{Interests}Piano\ \ $\cdotp$\ \ Cooking\ \ $\cdotp$\ \ Running\ \ $\cdotp$\ \ Chess\ \ $\cdotp$\ \ Dancing}
+
+%----------------------------------------------------------------------------------------
+\end{cv}
+%25th April 2020
+%
+%\vspace{2em}
+%\noindent Philipp Stassen
+\end{document}

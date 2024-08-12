@@ -1,0 +1,128 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Plain Cover Letter
+% LaTeX Template
+% Version 1.0 (28/5/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Rensselaer Polytechnic Institute 
+% http://www.rpi.edu/dept/arc/training/latex/resumes/
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+\documentclass[10pt]{letter} % Default font size of the document, change to 10pt to fit more text
+%\usepackage[nochapters]{classicthesis} % Use the classicthesis style for the style of the document
+\usepackage[LabelsAligned]{currvita} % Use the currvita style for the layout of the document
+\usepackage[]{geometry}
+
+%\usepackage{newcent} % Default font is the New Century Schoolbook PostScript font 
+%\usepackage{helvet} % Uncomment this (while commenting the above line) to use the Helvetica font
+
+% Bibliography
+\makeatletter
+\newenvironment{thebibliography}[1]
+     {\list{\@biblabel{\@arabic\c@enumiv}}%
+           {\settowidth\labelwidth{\@biblabel{#1}}%
+            \leftmargin\labelwidth
+            \advance\leftmargin\labelsep
+            \usecounter{enumiv}%
+            \let\p@enumiv\@empty
+            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+      \sloppy
+      \clubpenalty4000
+      \@clubpenalty \clubpenalty
+      \widowpenalty4000%
+      \sfcode`\.\@m}
+     {\def\@noitemerr
+       {\@latex@warning{Empty `thebibliography' environment}}%
+      \endlist}
+\newcommand\newblock{\hskip .11em\@plus.33em\@minus.07em}
+\makeatother
+
+\pagestyle{empty}
+% Margins
+\topmargin=-1in % Moves the top of the document 1 inch above the default
+\textheight=9.5in % Total height of the text on the page before text goes on to the next page, this can be increased in a longer letter
+\oddsidemargin=-10pt % Position of the left margin, can be negative or positive if you want more or less room
+\textwidth=6.5in % Total width of the text, increase this if the left margin was decreased and vice-versa
+
+\let\raggedleft\raggedright % Pushes the date (at the top) to the left, comment this line to have the date on the right
+
+%\address{test}
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	ADDRESSEE SECTION
+%----------------------------------------------------------------------------------------
+\begin{letter}{}%{Department  \\ University of X\\ City, State Area Code}
+%----------------------------------------------------------------------------------------
+%	YOUR NAME & ADDRESS SECTION
+%----------------------------------------------------------------------------------------
+\begin{center}
+	\textbf{Philipp Jan Andries Stassen} \\ % Your name
+%\vspace{20pt} \hrule height 1pt % If you would like a horizontal line separating the name from the address, uncomment the line to the left of this text
+Skovvangsvej 62, 3tv\\ 8200 Aarhus N, Denmark\\ +45 42469876 \\ philipp.stassen@gmail.com % Your address and phone number
+\end{center} 
+
+\vspace{1.5em}
+\begin{center} \large\bf Internship on Formal Verification for Cybersecurity
+\end{center}
+\bigskip
+ % Your name for the signature at the bottom
+
+%----------------------------------------------------------------------------------------
+%	LETTER CONTENT SECTION
+%----------------------------------------------------------------------------------------
+
+Dear Sir or Madam,
+
+\smallskip
+
+to thrive as a researcher in mathematics and computer science, I herewith apply for the internship on Formal Verification for Cybersecurity.
+I am capable of conducting the relevant research in this area and am excited to develop new reasoning techniques for reactive systems and logics for programming languages.
+Both my quick comprehension of complex topics as well as my passion for mathematical methods in computer science make me the most suitable candidate for the internship at Airbus Cyber Security.
+
+Since 2020 I am enrolled as a PhD at the Center for Basic Research in Program Verification at the Aarhus University.
+Together with my supervisor Lars Birkedal and other collaborators I investigate propabalistic programs and modal type systems.
+Modal type theories are strong enough to reason about complicated structures such as streams and reactive programs.
+
+My desire to focus on theoretical computer science and logic was sparked in May 2018, when I attended the summer school of the Hausdorff trimester program ``Types Sets and Constructions''.
+Studying at Stockholm university provided me with the perfect environment to focus more specifically on the constructive aspects of mathematical logic and theoretical computer science.
+I attended courses in Type Theory, Modal and Temporal Logic, Theory for Computation and Formal Language, before completing my master thesis together with my supervisors Peter LeFanu Lumsdaine and Guillaume Brunerie on the 30st of March 2020.
+My thesis proves a strong equivalence theorem, which functions as a tool to construct \emph{weak models} for dependent type theories.
+The definitions and proofs are formalized in the proof assistant Agda\footnote{https://github.com/philippstassen/initiality/tree/develop1}.
+
+For your future projects I can benefit you through my deep insight in theoretical computer science and my vast experience in the field of type theory.
+
+%Mein Ziel ist es, die praktischen Realitäten mehr in meine Forschung einzubringen, und umgekehrt zu sehen, wo mein theoretisches Wissen Anwendung findet – deshalb möchte ich mehr darüber lernen wie Software Architektur von Critical Systems in der Praxis umgesetzt wird.
+
+I am determined to acquire techniques and skills that are practically relevant and reflect those into my ongoing research. Conversely, I want to learn how my theoretical knowledge can be applied in practical contexts and explore alternative career paths.
+
+With my experience in and excitement for computer science,
+your internship provides me with the perfect opportunity to work interdisciplinary and create practical applications for Program Verification.
+
+
+Sincerely yours,
+
+\smallskip
+Philipp Stassen
+
+\vfill
+\encl{Curriculum vitae} % List your enclosed documents here, comment this out to get rid of the "encl:"
+
+%----------------------------------------------------------------------------------------
+\bibliographystyle{unsrt}
+\bibliography{bibliography}
+
+\end{letter}
+\end{document}
+
