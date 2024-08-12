@@ -1,0 +1,113 @@
+%Project Supervisor: Lars Birkedal
+%
+%Project Title : Guarded Cubical TT (?)
+%
+%Work Plan:
+
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[english]{babel}
+\usepackage{amsmath,amssymb,amsfonts,amsthm,mathtools,sansmath,wasysym}
+\usepackage{cleveref}
+\usepackage{tikz-cd}
+\usepackage{url}
+\usepackage[LabelsAligned]{currvita} % Use the currvita style for the layout of the document
+\usepackage[top=0.5in]{geometry}
+
+\usepackage{titlesec}
+\date{April 30, 2020}
+
+\titleformat{\section}[leftmargin]
+{\normalfont
+\sffamily\bfseries}
+{}{0pt}{}
+\titlespacing{\section}
+{4pc}{1.5ex plus .1ex minus .2ex}{2pc}
+
+%Indentation
+\setlength\parindent{0pt}
+\setlength\parskip{\medskipamount}
+%Commands
+%Umgebungen
+\title{Project Description: \\Towards an implementation of guarded Cubical Type Theory}
+\author{Philipp Stassen}
+\begin{document}
+\maketitle
+\vspace{2em}
+\section{Introduction}
+The goal is to further understand guarded Cubical Type Theory by contributing towards its implementation. This can be achieved both in theory and in practice: By proving meta theoretical results, such as decidability of type-checking and addressing the coherence issues, as well as practically by verifying proofs and programs with GCTT.
+
+Dependent type theories are the foundation for many proof assistants (Agda, Coq,...).
+Ever since, one focal point of discussion has been the subtle equality: strong extensional equalities versus more restricted intensional equalities, of which the latter relishes the benefits of good computational behaviour. It was only until in 2007 when the new homotopy type theory established a stronger notion of equality, while still offering the merits of its intensional counterparts.
+Yet the interpretation of such a type theory has proven to be problematic; as the initial simplicial model is not constructive, it cannot serve as base for an implementation.
+Up until now the simplicial model has not been constructivized.
+
+However, in 2013, Coquand, Huber, Mörtberg and Cohen published their paper about a constructive interpretation of a type theory similar to HoTT in cube categories (\cite{cubicaltt}) – using cubes, the obstacles making simplices problematic in constructivisation disappear.
+
+Most notably the cubical Agda proof assistant (still in beta) supports the new constructors. Currently, this implementation is still incomplete. Computations that in theory compute (as the Brunerie numbers in \cite{brunerie}) do not halt.
+
+There are several approaches to enable coinduction for type theories, some of which are also implemented in various proof assistants.
+To ensure the well-definedness, function definitions need to be verified as \emph{productive}.
+Aiming towards a more accessible coinduction, the authors of \emph{Programming and reasoning with guarded recursion for coinductive types} (\cite{GTT}) introduce the new ``\emph{later}'' modality and provide denotational semantics, supported by an experimental implementation in Agda – thus guaranteeing productivity via \emph{typings}.
+Building on that paper, the results were extended to dependent type theories in \cite{GDTT} and eventually to cubical type theory in \cite{GCTT}.
+
+
+%The goal is to further understand guarded Cubical Type Theory by contributing towards its implementation. This can be achieved both theoretically and practically: Proving meta theoretical results, such as decidability of type-checking and addressing the coherence issues, as well as practically verifying proofs and programs with GCTT.  
+%
+%Dependent type theories are the foundation for many proof assistants (Agda, Coq,...). 
+%Ever since, one focal point of discussion has been the subtle equality: strong extensional equalities vs more restricted intensional equalities. The latter one relishing the benefits of good computational behaviour. It was only until in 2007 the new homotopy type theory cleared the path for a stronger notion of equality that still enjoys the similar merits as its intensional counterparts. 
+%The interpretation of such a type theory has proven to be troublesome; the initial simplicial model was not constructive and thus could not serve as starting point for an implementation. 
+%Up until now the simplicial model has not been constructivized.
+%
+%However, in 2013 Thierry Coquand, Simon Huber, Anders Mörtberg and Cohen published their paper about an constructive interpretation of a type theory similar to HoTT in cube categories (\cite{cubicaltt}) – with cubes the substantial problems of simplices that make an constructivisation troublesome disappear. 
+%
+%Most notably the cubical Agda proof assistant (still in beta) supports the new constructors. Currently this implementation is still unfinished, computations that theoretically should compute (as the Brunerie numbers) do not halt. 
+%
+%There are several approaches to enable coinduction for type theories, some of which are also implemented in various proof assistants. 
+%To ensure the well-definedness one needs to verify that function definitions are \emph{productive}, that is terminate for any input. There are different approaches to achieve that, the more common one being syntactical checks. 
+%Aiming towards making coinductiveness more accessible the authors of \cite{GTT} followed the approach to guarantee productivity via \emph{typings}. They do so by introducing the new ``\emph{later}'' modality and providing denotational semantics as well as an experimental implementation in Agda for it. 
+%Building on that paper the results were extended to dependent type theories in \cite{GDTT} and eventually to cubical type theory in \cite{GCTT}. 
+
+%Considering the development of genuine support for cubical type theory in Agda.
+
+%Due to recent developments there exist few implementations of which and many models. 
+\section{Background}
+Having worked on coherence problems in my master thesis, I am familiar with standard papers like \emph{Syntax and semantics of dependent types} (\cite{hofmann97}) and \emph{Extensional Constructs in Intensional Type Theory} (\cite{hofmann-extensional}).
+I have basic understanding of the literature mentioned in the introduction; to further deepen my knowledge in the semantics of homotopy type theory, more research will be necessary. 
+%Besides the literature mentioned in the introduction, further literature to understand the semantics of homotopy type theory will be needed.  
+Additionally, the homotopic interpretation requires elaborate knowledge about infinity-, cube- and simplex categories.
+\section{Work Plan}
+Depending on the current research status and future research breakthroughs, flexibility in adjusting the work plan is mandatory, hence guaranteeing my most efficient contributions.
+This said, I will outline the focal points of my work plan in the following:
+%Considering the fact that there will be a lot interaction and activity throughout the years it might be worth digressing from the plan from time to time.
+%Most certainly it will be reasonable to switch the order and direction of study to adjust for recent developments or pick up urgent problems, such as certain verifications or formalizations. 
+\begin{enumerate}
+	\item\textbf{Study} metatheoretical properties of type theory in general as well as CTT and GCTT in particular. Moreover, analyze the relationship between the constructive cubical set models presented in \cite{GCTT} with the simplicial set model of \cite{GITT}.
+%This relates to the question whether the simplicial set model \cite{univalencemodel} can be constructivized.
+
+%	\item\textbf{Explore} the consequences of constructive GCTT and CTT doing various formalization projects and verifications. 
+
+ 	\item\textbf{Compute} using GCTT and CTT, exploring the computational merits of the cubical implementation.  
+		Testing and experimenting will deepen my general understanding, 
+for CTT in particular formalizations are already feasible.
+
+	\item\textbf{Develop} better support for CTT in modern proof assistants, finding solutions to problems related to typechecking, unification, etc, and thus propelling developments also relevant for GCTT.
+%through the cubical Agda proof assistant (that is currently in beta)
+
+ 	\item\textbf{Establish} decidable type-checking and canonicity for GCTT and start working on a type checker. Furthermore, as suggested in \cite{GCTT}, investigate how guarded recursion and higher inductive types interact. 
+
+
+	\item\textbf{Document} the results and make them available for a broader audience. 	
+\end{enumerate}
+\section{Conclusion}
+My vast experience in type theories and the subtleties of categorial semantics as well as my familiarity with Agda will benefit the progress of this project - and thus contribute towards an implementation of guarded Cubical Type Theory. 
+
+\vspace{10em}
+\bibliographystyle{alpha}
+\bibliography{bibliography}
+
+\end{document}
+
+

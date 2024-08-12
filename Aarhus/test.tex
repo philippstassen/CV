@@ -1,0 +1,37 @@
+\documentclass{letter}
+\usepackage{lipsum}
+
+\pagestyle{plain}
+
+\makeatletter
+\let\ps@empty\ps@plain
+\let\ps@firstpage\ps@plain
+\makeatother
+
+\address{Joe Smith \\ 100 Main Street. \\ Chicago, IL 60610}
+
+\begin{document}%
+
+\begin{letter}{Department  \\ University of X\\ City, State Area Code}%
+
+\opening{Dear Some Name,}
+
+\lipsum
+
+
+\vfill
+
+Sincerely,
+
+\vfill
+
+Joe Smith
+
+Ph.D. Candidate
+
+Department 
+
+University 
+\end{letter}
+
+\end{document}

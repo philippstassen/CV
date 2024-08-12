@@ -1,0 +1,127 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Plain Cover Letter
+% LaTeX Template
+% Version 1.0 (28/5/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Rensselaer Polytechnic Institute 
+% http://www.rpi.edu/dept/arc/training/latex/resumes/
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+\documentclass[11pt]{letter} % Default font size of the document, change to 10pt to fit more text
+
+%\usepackage{newcent} % Default font is the New Century Schoolbook PostScript font 
+\usepackage{helvet} % Uncomment this (while commenting the above line) to use the Helvetica font
+
+\makeatletter
+\newenvironment{thebibliography}[1]
+     {\list{\@biblabel{\@arabic\c@enumiv}}%
+           {\settowidth\labelwidth{\@biblabel{#1}}%
+            \leftmargin\labelwidth
+            \advance\leftmargin\labelsep
+            \usecounter{enumiv}%
+            \let\p@enumiv\@empty
+            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+      \sloppy
+      \clubpenalty4000
+      \@clubpenalty \clubpenalty
+      \widowpenalty4000%
+      \sfcode`\.\@m}
+     {\def\@noitemerr
+       {\@latex@warning{Empty `thebibliography' environment}}%
+      \endlist}
+\newcommand\newblock{\hskip .11em\@plus.33em\@minus.07em}
+\makeatother
+% Margins
+\topmargin=-1in % Moves the top of the document 1 inch above the default
+\textheight=8.5in % Total height of the text on the page before text goes on to the next page, this can be increased in a longer letter
+\oddsidemargin=-10pt % Position of the left margin, can be negative or positive if you want more or less room
+\textwidth=6.5in % Total width of the text, increase this if the left margin was decreased and vice-versa
+
+\let\raggedleft\raggedright % Pushes the date (at the top) to the left, comment this line to have the date on the right
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	ADDRESSEE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{letter}
+%----------------------------------------------------------------------------------------
+%	YOUR NAME & ADDRESS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{center}
+\large\bf Philipp Jan Andries Stassen \\ % Your name
+%\vspace{20pt} \hrule height 1pt % If you would like a horizontal line separating the name from the address, uncomment the line to the left of this text
+Erik Sandbergs gata 46 \\ 169 34 Solna, Sweden \\ +49 151 4242 9379 \\ philipp.stassen@gmail.com % Your address and phone number
+\end{center} 
+\vfill
+
+\signature{Philipp Stassen} % Your name for the signature at the bottom
+
+%----------------------------------------------------------------------------------------
+%	LETTER CONTENT SECTION
+%----------------------------------------------------------------------------------------
+
+Dear Sir or Madam,
+
+\smallskip
+
+I am writing to apply for the PhD Position in Mathematics that you advertised as vacant.
+I am a student at the Stockholm University and by concluding my master thesis "An analysis of Curien's explicit syntax for Dependent Type Theory" on the 30th of March 2020 I acquired the Master of Science in Mathematics. 
+Because of my experience in the area of type theories and mathematical logic as well as my general mathematical background I am confident that I am an excellent candidate for a PhD under the supervision of Peter LeFanu Lumsdaine.
+
+I'm 26 years old. I have the German and Dutch citizenship, but I grew up in the Frankfurt area where I acquired the higher education entrance qualification. In 2014 I started studying mathematics at the Goethe Universität Frankfurt and then moved to the Rheinische Friedrich-Wilhelms-University in Bonn in 2015. 
+During my time in Bonn I acquired knowledge in mathematical logic by attending courses in classical Set Theory, Model Theory and Forcing and also a seminar on Type Theory. I decided to continue the seminar with a Bachelor thesis dealing more specifically with homotopy type theory.
+I finished my Bachelor thesis "Formalism of homotopy type theory and its application to logic" in January 2018 in Bonn. 
+
+During May 2018 I visited the summer school of the Hausdorff trimester program "Types Sets and Constructions" which led me to the decision of continuing my mathematical studies with a larger focus on theoretical computer science and logic.
+
+Therefore, in September 2018 I moved to Stockholm University, which had with Erik Palmgren, Peter LeFanu Lumsdaine and Per Martin Löf a lot of expertise in this area of mathematics. 
+This allowed me to focus more specifically on the constructive aspects of mathematical logic and theoretical computer science.
+I would like to highlight the courses in Type Theory, Infinity-categories, Proof Theory and Subsystems of Second Order Arithmetic, Modal and Temporal Logic as well as Theory for Computation and Formal Language that I have taken during this time.
+I completed my master thesis together with my supervisors Peter LeFanu Lumsdaine and Guillaume Brunerie at the 30st of March 2020 with the title "An analysis of Curiens explicit syntax for Dependent Type Theory". 
+
+I was fortunate that I could attend the conferences "Proof, Computation, Complexity" and "Mathematical Logic and Constructivity" in the summer 2019 and by that learn about the latest discussions and developments in constructive mathematics and in particular univalent foundations of mathematics.
+Therefore, the PhD position would be an excellent chance to further work and learn about . I am confident that I do not only possess the knowledge to to research in this area, but that I can contribute to the study of categorial semantics of type theory by following up on my master thesis. 
+
+In my master thesis we study a coherence problem that arises when interpreting dependent type theories in \emph{locally cartesian closed categories}. The on-the-nose equalities of the syntax collide with the up-to-isomorphism equalities of categories.
+
+To resolve that problem we design an intermediate type theory that has an additional term constructor, the \emph{explicit coercion}. Pierre-Louis Curien has proven in \cite{curien} that locally cartesian closed categories provide strict models for this new syntax – thereby resolving the mismatch by modifying the syntax instead. 
+It would be interesting to know how these models relate to the original, unmodified type theory. Therefore, we try to understand in what sense the syntaxes are equivalent.
+	In my thesis we prove a strong such equivalence result by constructing a lifting function and proving a soundness theorem. 
+	This function can then be used to prove coherence theorems and by that could serve as a tool to construct weak models for dependent type theories. 
+	The definitions and proofs are formalized in the proof assistant Agda.
+
+	I would be keen to follow up my thesis and employ its result to study this weaker notion of interpretation and proceed formalizing the results in Agda or Coq. This relates to a work of Peter LeFanu Lumsdaine and Chris Kapulkin who already discuss these different type of models in \cite{lumsdainehomotopy} which would be an excellent situation to progress with this topic.
+
+	Furthermore, I would look forward to extend the very slim type theory; as suggested in \cite{curien-garner-hofmann} extensional type theories, intensional type theories as well as homotopy type theories could be investigated by enriching the theory with new constructors and adapting the equality rules appropriately. 
+
+Finally I want to say that over all I would look forward to acquire techniques and skills that are practically relevant for fields inside and outside of mathematics. 
+In particular a collaboration with computer science departments comes to mind. For instance, an already ``popular'' application for proof assistants like Coq and Agda is program verification. But I would also love to develop and explore more general reasoning techniques that possibly take modalities or quantitative systems into consideration (such as studied in the philosophy department of SU and the mathematical statistic department).
+
+I believe that being admitted to the PhD program would provide me with the skills necessary to work interdisciplinary, creatively apply theory in different contexts and conduct research in mathematical logic. 
+
+
+\closing{Sincerely yours,}
+
+\encl{Curriculum vitae, Transcript of Records} % List your enclosed documents here, comment this out to get rid of the "encl:"
+
+%----------------------------------------------------------------------------------------
+\bibliographystyle{unsrt}
+\bibliography{bibliography}
+
+\end{letter}
+\end{document}
+
